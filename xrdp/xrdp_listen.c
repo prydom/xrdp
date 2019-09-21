@@ -341,7 +341,7 @@ xrdp_listen_parse_integer(char *strout, int strout_max,
         }
         else
         {
-            if ((strin[strin_index] >= '0') && (strin[strin_index] <= '9'))
+            if (((strin[strin_index] >= '0') && (strin[strin_index] <= '9')) || (strin[strin_index] == '-'))
             {
                 in = 1;
                 strout[strout_index++] = strin[strin_index++];
